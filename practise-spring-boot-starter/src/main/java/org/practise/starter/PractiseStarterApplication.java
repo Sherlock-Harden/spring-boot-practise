@@ -7,15 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 应用模块名称：
- *
- * 代码描述：
- *
- * Copyright: Copyright (C) 2020 XXX, Inc. All rights reserved.
- *
- * Company: neusoft
- *
- * @author yuansj[yuansj@neusoft.com]
+ * @author sherlock[q541458352@126.com]
  * @since 2020/11/24 20:42
  **/
 @SpringBootApplication
