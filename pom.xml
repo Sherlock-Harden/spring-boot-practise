@@ -5,6 +5,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>practise-spring-boot-starter</module>
+    <module>practise-spring-boot-listener</module>
   </modules>
 
   <parent>
