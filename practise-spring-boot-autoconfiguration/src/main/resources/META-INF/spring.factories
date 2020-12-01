@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  org.practise.configuration.ConfigAutoConfiguration
+  org.practise.autoconfiguration.ConfigAutoConfiguration

@@ -1,4 +1,4 @@
-package org.practise.configuration;
+package org.practise.autoconfiguration;
 
 import javax.annotation.Resource;
 import org.springframework.boot.CommandLineRunner;
@@ -10,14 +10,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/12/01
  **/
 @SpringBootApplication
-public class ConfigApplication implements CommandLineRunner {
+public class AutoConfigurationApplication implements CommandLineRunner {
 
   @Resource
   private ConfigProperties configProperties;
 
 
   public static void main(String[] args) {
-    SpringApplication.run(ConfigApplication.class, args);
+    SpringApplication.run(AutoConfigurationApplication.class, args);
   }
 
   @Override

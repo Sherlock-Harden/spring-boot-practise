@@ -1,4 +1,4 @@
-package org.practise.configuration;
+package org.practise.autoconfiguration;
 
 import java.util.List;
 import lombok.Data;

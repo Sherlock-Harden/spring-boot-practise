@@ -1,4 +1,4 @@
-package org.practise.configuration;
+package org.practise.autoconfiguration;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
