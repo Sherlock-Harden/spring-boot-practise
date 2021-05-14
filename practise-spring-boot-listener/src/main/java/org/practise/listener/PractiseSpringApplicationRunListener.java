@@ -1,8 +1,8 @@
 package org.practise.listener;
 
 import java.io.IOException;
+import java.util.Map;
 import java.util.Properties;
-import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -28,16 +28,11 @@ public class PractiseSpringApplicationRunListener implements SpringApplicationRu
   }
 
 
-  @Override
-  public void starting(ConfigurableBootstrapContext bootstrapContext) {
-
-  }
-
   /**
    * 读取配置文件内容 放到springboot容器
    */
   @Override
-  public void environmentPrepared(ConfigurableBootstrapContext bootstrapContext, ConfigurableEnvironment environment) {
+  public void environmentPrepared(ConfigurableEnvironment environment) {
 
     Properties properties = new Properties();
     try {
@@ -47,7 +42,7 @@ public class PractiseSpringApplicationRunListener implements SpringApplicationRu
       e.printStackTrace();
     }
     //读取名称为 *** 的内容
-    PropertySource propertySource = new PropertiesPropertySource("maxwell", properties);
+    PropertySource<Map<String, Object>> propertySource = new PropertiesPropertySource("maxwell", properties);
     /**
      * 将资源添加到springboot中
      */
