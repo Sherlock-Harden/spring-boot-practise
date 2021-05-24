@@ -4,9 +4,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Properties;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringApplicationRunListener;
+import org.springframework.boot.context.event.EventPublishingRunListener;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.core.Ordered;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertiesPropertySource;
@@ -16,17 +15,12 @@ import org.springframework.core.env.PropertySource;
  * @author sherlock[q541458352@126.com]
  * @date 2020/11/27
  **/
-public class PractiseSpringApplicationRunListener implements SpringApplicationRunListener, Ordered {
+public class PractiseSpringApplicationRunListener extends EventPublishingRunListener {
 
-  private final SpringApplication application;
-
-  private final String[] args;
 
   public PractiseSpringApplicationRunListener(SpringApplication application, String[] args) {
-    this.application = application;
-    this.args = args;
+    super(application, args);
   }
-
 
   /**
    * 读取配置文件内容 放到springboot容器
